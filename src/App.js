@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Card from 'react-bootstrap/Card';
 
-function App() {
+const App = ()=> {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div id='background'>
+      <header>
+        <h1>Under construction</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <a href='https://github.com/matiaselm'>Matias'</a> portfolio. I'll be collecting all my done projects and own stuff here
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <body>
+        {/* Container to hold all info cards table-like */}
+        <div id='cardContainer'>
+        <Card>
+          <Card.Title>About me</Card.Title>
+        </Card>
+        </div>
+      </body>
     </div>
   );
 }
