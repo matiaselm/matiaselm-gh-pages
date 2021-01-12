@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
-import Card from 'react-bootstrap/Card';
+import CustomCard from 'components/CustomCard';
+import styles from 'styles/styles';
+import ProjectTable from 'components/ProjectTable';
 
 const App = ()=> {
   return (
-    <div id='background'>
+    <div style={styles.background}>
       <header>
         <h1>Under construction</h1>
         <p>
@@ -13,11 +15,11 @@ const App = ()=> {
       </header>
       <body>
         {/* Container to hold all info cards table-like */}
-        <div id='cardContainer'>
-        <Card>
-          <Card.Title>About me</Card.Title>
-        </Card>
-        </div>
+        <ProjectTable />
+        <p>to-do: <br />
+            - Span cards to multiple rows <br />
+            - Create file containing info on all projects and write about the most important ones <br></br>
+            - Add personal info, maybe to header</p>
       </body>
     </div>
   );
