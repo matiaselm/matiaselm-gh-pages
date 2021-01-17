@@ -1,8 +1,8 @@
 const styles = {
-    card:{
-        width: '18rem',
+    card: {
         margin: 4,
-        maxWidth: '20rem',
+        maxWidth: '18rem',
+        minWidth: '18rem',
         flex: 1,
     },
     background: {
@@ -15,6 +15,7 @@ const styles = {
     projectTable: {
         display: 'flex',
         flexDirection: 'row',
+        flexWrap: 'wrap',
     }
 }
 
