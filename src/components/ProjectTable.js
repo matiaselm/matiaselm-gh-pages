@@ -4,22 +4,22 @@ import styles from 'styles/styles';
 import PropTypes from 'prop-types';
 
 
-const ProjectTable = ({ collection }) => {
-    let list = Object.keys(collection)
-    console.log('List: ' + collection)
+const ProjectTable = ({ list }) => {
+    console.log('List: ' + list)
 
     return (
         <div style={styles.projectTable}>
-            {list.map((p, key) => (
-                <CustomCard
+            {list.map((p, key) => {
+                console.log('Card' + key, 'imgSrc', p.imagesrc);
+                return <CustomCard
                     key={key}
                     title={p.title}
                     subtitle={p.subtitle}
                     text={p.text}
-                    imgSrc={p.imgSrc}
-                    projectPage={p.projectPage}
+                    imgSrc={p.imagesrc}
+                    projectPage={p.projecturl}
                 />
-            ))}
+            })}
         </div>
     );
 };
