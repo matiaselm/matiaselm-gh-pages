@@ -6,11 +6,11 @@ import ProjectInput from 'components/Project';
 import { getProjects } from 'services/collection';
 
 const App = () => {
-  const [collection, setCollection] = useState([])
+  const [list, setList] = useState([])
 
   useEffect(() => {
-    setCollection(getProjects())
-  }, [])
+    getProjects()       // TODO: Try to remember how to re-render after this fetch has finished
+  })
 
   return (
     <div style={styles.background}>
@@ -24,7 +24,7 @@ const App = () => {
       <body> {/* <body> */}
         <ProjectInput />
         {/* Container to hold all info cards table-like */}
-        <ProjectTable collection={collection} />
+        <ProjectTable collection={list} />
         <p>
           to-do: <br />- Firestore db for project cards <br></br>- Add personal info, maybe to
           header

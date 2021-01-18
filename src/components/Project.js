@@ -18,14 +18,14 @@ const ProjectInput = (props) => {
         projecturl: '#'
     });
 
-    const handleChange = e => {                        // Handle any form input when changed
+    const handleChange = e => {                         // Handle any form input when changed
         setProject((prevState) => ({                    // Change the specified part of object while maintaining the others
             ...prevState,
             [e.target.name]: e.target.value
         }));
     };
 
-    const handleSubmit = e => {
+    const handleSubmit = e => {                         // Creates an object with given input 
         console.log(`Submitting object: 
         ${project.title} 
         ${project.subtitle} 

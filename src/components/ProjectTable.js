@@ -4,13 +4,13 @@ import styles from 'styles/styles';
 import PropTypes from 'prop-types';
 
 
-const ProjectTable = (props) => {
-    const list = props.collection
-    console.log('List: ' + list)
+const ProjectTable = ({ collection }) => {
+    let list = Object.keys(collection)
+    console.log('List: ' + collection)
 
     return (
         <div style={styles.projectTable}>
-            {Object.keys(list).map((p, key) => (
+            {list.map((p, key) => (
                 <CustomCard
                     key={key}
                     title={p.title}
@@ -23,14 +23,15 @@ const ProjectTable = (props) => {
         </div>
     );
 };
+/*
 // TypeChecking using PropType
 ProjectTable.propTypes = {
-    collection: PropTypes.shape({
+    collection: PropTypes.shape([{
         title: PropTypes.string,
         subtitle: PropTypes.string,
         text: PropTypes.string,
         imgSrc: PropTypes.string,
         projectPage: PropTypes.string
-    })
-}
+    }])
+}*/
 export default ProjectTable;
