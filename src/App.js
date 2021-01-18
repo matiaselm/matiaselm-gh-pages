@@ -17,14 +17,10 @@ const App = () => {
             console.log(doc.id, ' => ', doc.data())
             collection.push(doc.data())
           })
-          console.log('Collection: ' + collection);
-          console.log('Collection object: ' + collection[1].title)
           setList(collection)
-          return
         })
     } catch (err) {
       console.log(err)
-      return
     }
   }
 
@@ -46,11 +42,11 @@ const App = () => {
         {/* Container to hold all info cards table-like */}
         <ProjectTable list={list} />
         <p>
-          to-do: <br />- Firestore db for project cards <br></br>- Add personal info, maybe to
+          to-do: <br />- Add personal info, maybe to
           header
         </p>
       </body>
-    </div>
+    </div >
   );
 };
 
