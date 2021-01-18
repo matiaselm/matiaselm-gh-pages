@@ -1,63 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import CustomCard from 'components/CustomCard';
 import styles from 'styles/styles';
+import PropTypes from 'prop-types';
 
-const projects = [
-    {
-        title: 'Test1',
-        subtitle: 'This is a first test project card',
-        text: 'some general info about the project',
-        imgSrc: 'https://placekitten.com/300/200',
-        projectPage: '#',
-    },
-    {
-        title: 'secondTest',
-        subtitle: 'The second test project card',
-        text: 'some general info. Gonna have to find a way to write more about these',
-        imgSrc: 'https://placekitten.com/300/200',
-        projectPage: '#',
-    },
-    {
-        title: 'third',
-        subtitle: 'The second test project card',
-        text: 'some general info. Gonna have to find a way to write more about these',
-        imgSrc: 'https://placekitten.com/300/200',
-        projectPage: '#',
-    },
-    {
-        title: 'FourthCard',
-        subtitle: 'Need to figure a good way to manage rows/columns for different screen sizes',
-        text: 'some general info. Gonna have to find a way to write more about these',
-        imgSrc: 'https://placekitten.com/300/200',
-        projectPage: '#',
-    },
-    {
-        title: 'FourthCard',
-        subtitle: 'Need to figure a good way to manage rows/columns for different screen sizes',
-        text: 'some general info. Gonna have to find a way to write more about these',
-        imgSrc: 'https://placekitten.com/300/200',
-        projectPage: '#',
-    },
-    {
-        title: 'FourthCard',
-        subtitle: 'Need to figure a good way to manage rows/columns for different screen sizes',
-        text: 'some general info. Gonna have to find a way to write more about these',
-        imgSrc: 'https://placekitten.com/300/200',
-        projectPage: '#',
-    },
-    {
-        title: 'FourthCard',
-        subtitle: 'Need to figure a good way to manage rows/columns for different screen sizes',
-        text: 'some general info. Gonna have to find a way to write more about these',
-        imgSrc: 'https://placekitten.com/300/200',
-        projectPage: '#',
-    },
-];
 
 const ProjectTable = (props) => {
+    const list = props.collection
+    console.log('List: ' + list)
+
     return (
         <div style={styles.projectTable}>
-            {projects.map((p, key) => (
+            {Object.keys(list).map((p, key) => (
                 <CustomCard
                     key={key}
                     title={p.title}
@@ -70,5 +23,14 @@ const ProjectTable = (props) => {
         </div>
     );
 };
-
+// TypeChecking using PropType
+ProjectTable.propTypes = {
+    collection: PropTypes.shape({
+        title: PropTypes.string,
+        subtitle: PropTypes.string,
+        text: PropTypes.string,
+        imgSrc: PropTypes.string,
+        projectPage: PropTypes.string
+    })
+}
 export default ProjectTable;
