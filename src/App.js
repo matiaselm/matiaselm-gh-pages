@@ -5,6 +5,7 @@ import ProjectTable from 'components/ProjectTable';
 import ProjectInput from 'components/ProjectInput';
 import TopBar from 'components/TopBar';
 import BottomBar from 'components/BottomBar';
+import Warning from 'components/Warning';
 import firebase from 'services/firebase';
 
 const App = () => {
@@ -35,6 +36,7 @@ const App = () => {
       <TopBar />                    {/* TopBar and BottomBar are to show info and other stuff than the projects themselves */}
       <ProjectInput />
       <ProjectTable list={list} />  {/* Container to hold all info cards table-like */}
+      <Warning />
       <BottomBar />
     </div >
   );

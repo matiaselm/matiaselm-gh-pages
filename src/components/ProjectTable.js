@@ -16,6 +16,7 @@ const ProjectTable = ({ list }) => {
                     title={p.title}
                     subtitle={p.subtitle}
                     text={p.info}
+                    type={p.type}
                     imgSrc={p.imagesrc}
                     projectPage={p.projecturl}
                 />
