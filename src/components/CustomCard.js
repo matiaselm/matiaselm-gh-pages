@@ -16,17 +16,18 @@ const CustomCard = (props) => {
 
   return (
     <Card style={styles.card}>
-      {props.imgSrc != '' ?
-        <Card.Img height="200" variant="top" src={props.imgSrc} style={{ objectFit: 'cover' }} />
-        :
-        <Card.Img height="200" variant='top' src={localImg} style={{ objectFit: 'cover' }} />
-      }
+      <a href={props.projectPage}>
+        {props.imgSrc != '' ?
+          <Card.Img height="200" variant="top" src={props.imgSrc} style={{ objectFit: 'cover' }} href={props.projectPage} />
+          :
+          <Card.Img height="200" variant='top' src={localImg} style={{ objectFit: 'cover' }} href={props.projectPage} />
+        }
+      </a>
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
         <Card.Subtitle style={styles.mutedText}>{props.subtitle}</Card.Subtitle>
 
-        <Card.Text>{props.text}</Card.Text>
-        <Card.Link href={props.projectPage}>View</Card.Link>
+        <Card.Text style={{ maxHeight: '20ch', overflowY: 'scroll', msOverflowStyle: 'none', scrollbarWidth: 'none' }}>{props.text}</Card.Text>
       </Card.Body>
     </Card>
   );

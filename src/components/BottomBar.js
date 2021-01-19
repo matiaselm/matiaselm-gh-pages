@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from 'styles/styles';
-import Warning from 'components/Warning';
 
 const BottomBar = () => {
     return (<div style={styles.bottomBar}>
