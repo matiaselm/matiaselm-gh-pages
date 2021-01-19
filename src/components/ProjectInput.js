@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import firebase from "../services/firebase";
-
 const db = firebase.firestore();                    // Init firebase firestore
 
 db.settings({

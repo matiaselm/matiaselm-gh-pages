@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import styles from 'styles/styles';
 import ProjectTable from 'components/ProjectTable';
-import ProjectInput from 'components/Project';
+import ProjectInput from 'components/ProjectInput';
+import TopBar from 'components/TopBar';
+import BottomBar from 'components/BottomBar';
 import firebase from 'services/firebase';
 
 const App = () => {
@@ -30,22 +32,10 @@ const App = () => {
 
   return (
     <div style={styles.background}>
-      <div> {/* <header> */}
-        <h1>Under construction</h1>
-        <p>
-          <a href="https://github.com/matiaselm">Matias'</a> portfolio. I'll be collecting all my
-          done projects and own stuff here
-        </p>
-      </div>
-      <body> {/* <body> */}
-        <ProjectInput />
-        {/* Container to hold all info cards table-like */}
-        <ProjectTable list={list} />
-        <p>
-          to-do: <br />- Add personal info, maybe to
-          header
-        </p>
-      </body>
+      <TopBar />                    {/* TopBar and BottomBar are to show info and other stuff than the projects themselves */}
+      <ProjectInput />
+      <ProjectTable list={list} />  {/* Container to hold all info cards table-like */}
+      <BottomBar />
     </div >
   );
 };
