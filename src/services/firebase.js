@@ -4,13 +4,13 @@ import "firebase/firestore";            // Add the Firebase products that you wa
 
 // Personal firebase config
 const firebaseConfig = {
-    apiKey: "AIzaSyAZRVJBPEs4BPxJF5GMjI2YWm_-k-85Hl4",
-    authDomain: "portfolio-5cff5.firebaseapp.com",
-    projectId: "portfolio-5cff5",
-    storageBucket: "portfolio-5cff5.appspot.com",
-    messagingSenderId: "1090484156076",
-    appId: "1:1090484156076:web:8e31e11acc32733bf9d109",
-    measurementId: "G-ZKYXNP6ZT3"
+    apiKey: process.env.REACT_APP_FB_APIKEY,
+    authDomain: process.env.REACT_APP_FB_AUTHDOMAIN,
+    projectId: process.env.REACT_APP_FB_PROJECTID,
+    storageBucket: process.env.REACT_APP_FB_STORAGEBUCKET,
+    messagingSenderId: process.env.REACT_APP_FB_MESSAGINGSENDERID,
+    appId: process.env.REACT_APP_FB_APPID,
+    measurementId: process.env.REACT_APP_FB_MEASUREMENTID
 };
 
 // Initialize Firebase and firestore

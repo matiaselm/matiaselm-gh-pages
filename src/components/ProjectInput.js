@@ -19,6 +19,10 @@ const ProjectInput = (props) => {
         projecturl: '#'                                 // URL for the project's site
     });
 
+    const typeList = [
+        'other','web','react','kotlin','javascript'
+    ]
+
     const handleChange = e => {                         // Handle any form input when changed
         setProject((prevState) => ({                    // Change the specified part of object while maintaining the others
             ...prevState,
@@ -63,6 +67,22 @@ const ProjectInput = (props) => {
         })
     }
 
+    const RadioButton = ({name, key}) => {
+        return (<>
+            <input
+            style={styles.radio}
+            key={key}
+            name='type'
+            type='radio'
+            id={name}
+            value={name}
+            onClick={handleChange}
+            defaultChecked={project.type === name}
+        />
+            <label for={name}>{name}</label>
+        </>)
+    }
+
     return (
         <div style={styles.input}>
             <form id='submitForm' onSubmit={handleSubmit}>
@@ -98,32 +118,13 @@ const ProjectInput = (props) => {
                     value={project.projecturl}
                     onChange={handleChange}
                 />
-                <div>       {/* Radio buttons to select project type */}
-                    <input style={styles.radio} type="radio" id="other" name="type" value="other"
-                        onClick={handleChange} checked={project.type === 'other'}
-                    />
-                    <label for="other">Other</label>
-
-                    <input style={styles.radio} type="radio" id="web" name="type" value="web"
-                        onClick={handleChange} checked={project.type === 'web'}
-                    />
-                    <label for="web">Web</label>
-
-                    <input style={styles.radio} type="radio" id="react" name="type" value="react"
-                        onClick={handleChange} checked={project.type === 'react'}
-                    />
-                    <label for="web">React</label>
-
-                    <input style={styles.radio} type="radio" id="kotlin" name="type" value="kotlin"
-                        onClick={handleChange} checked={project.type === 'kotlin'}
-                    />
-                    <label for="kotlin">Kotlin</label>
-
-                    <input style={styles.radio} type="radio" id="javascript" name="type" value="javascript"
-                        onClick={handleChange} checked={project.type === 'javascript'}
-                    />
-                    <label for="javascript">JavaScript</label>
-                </div>
+                <div>       {/* Radio buttons to select project type 
+                                - made with .map function and a custom component
+                                - uses typeList as source for the string-data */}
+                    {typeList.map((key, index) => {
+                        return <RadioButton name={typeList[index]} key={key} />
+                    })}
+                </div> 
                 <button type="submit">Add</button>
             </form>
 
