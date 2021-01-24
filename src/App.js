@@ -33,7 +33,7 @@ const App = () => {
   return (
     <div style={styles.background}>
       <TopBar />                    {/* TopBar and BottomBar are to show info and other stuff than the projects themselves */}
-      <ProjectInput />
+      {/*<ProjectInput />*/}
       <ProjectTable list={list} />  {/* Container to hold all info cards table-like */}
       <BottomBar />
     </div >
