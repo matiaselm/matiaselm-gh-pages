@@ -2,6 +2,8 @@
 
 Current published version of this app can be found [here](https://matiaselm.github.io/matiaselm-gh-pages/)
 
+It's purpose is to have one place for all of the stuff done by me - a portfolio for my coding and other personal projects.
+
 ## How to run
 
 - Make sure you have [Node.js](https://nodejs.org/en/) with npm installed
