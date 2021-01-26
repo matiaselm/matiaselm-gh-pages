@@ -4,7 +4,7 @@ Current published version of this app can be found [here](https://matiaselm.gith
 
 ## How to run
 
-- Make sure you have [Node.js](https://nodejs.org/en/) with npm installed (should come with Node.js)
+- Make sure you have [Node.js](https://nodejs.org/en/) with npm installed
 
 - Git clone the repo
 
