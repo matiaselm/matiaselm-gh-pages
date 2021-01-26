@@ -1,4 +1,4 @@
-# This app was started with [Create React App](https://github.com/facebook/create-react-app)
+# This project was started with [Create React App](https://github.com/facebook/create-react-app)
 
 Current published version of this app can be found [here](https://matiaselm.github.io/matiaselm-gh-pages/)
 
