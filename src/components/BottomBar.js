@@ -13,7 +13,8 @@ const BottomBar = () => {
         </p>
         <p>Under construction! <br />
         This message will be removed when I'm 100% happy with the page. <br />
-        Latest update: 24.1.2021
+        Current status: Hiatus, didn't renew firebase so there's no data for the cards <br/>
+        Latest update: 16.3.2021
         </p>
     </div>)
 }
